@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    background: #2E3440;
+}
+
+h1 {
+    color: #ECEFF4;
+    font-size: 40px;
+}
+
+h1,
+a {
+    font-family: 'Roboto Slab', serif;
+}
+
+body,
+.assignment-card {
+    font-family: 'Roboto', sans-serif;
+}
+
+.shadow {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+p,
+a {
+    color: #D8DEE9;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    transform: scale(1.0);
+    transition: transform 0.5s;
+}
+
+a:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+#github:hover {
+    color: #D08770;
+}
+
+#blog:hover {
+    color: #EBCB8B;
+}
+
+#contact:hover {
+    color: #A3BE8C;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
+
+section {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#header {
+    grid-column: span 12;
+    background: #3B4252;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+nav {
+    min-width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.text {
+    grid-column: span 7;
+}
+
+.decorative-text {
+    padding: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blob {
+    z-index: 1;
+    position: absolute;
+    min-height: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.adjectives {
+    z-index: 2;
+    position: relative;
+}
+
+.adjectives h1 {
+    transform: translateY(0px);
+    transition: transform 0.5s;
+}
+
+.adjectives h1:hover {
+    transform: translateY(-5px);
+    transition: transform 0.5s;
+}
+
+.assignments {
+    grid-column: 8 / 13;
+}
+
+.assignment-card {
+    border-radius: 25px;
+    height: 240px;
+    max-width: 500px;
+    min-width: max-content;
+    display: flex;
+    margin: 20px;
+}
+
+.assignment-card h2 {
+    border-radius: 0px 0px 25px 25px;
+    align-self: flex-end;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+#assignment1 {
+    background: url(/assets/assignment1.png);
+}
+
+#assignment1 h2 {
+    background-image: linear-gradient(to right, #88C0D0, #00000000);
+}
+
+#assignment2 {
+    background: url(/assets/assignment2.png);
+}
+
+#assignment2 h2 {
+    background-image: linear-gradient(to right, #81A1C1, #00000000);
+}
+
+#assignment3 {
+    background: url(/assets/assignment3.png);
+}
+
+#assignment3 h2 {
+    background-image: linear-gradient(to right, #5E81AC, #00000000);
+}
+
+.assignment-card,
+#assignment1,
+#assignment2,
+#assignment3 {
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #00000077;
+}
+
+@media (max-width: 800px) {
+    .container section {
+        grid-column: span 12;
+    }
+
+    #header {
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
